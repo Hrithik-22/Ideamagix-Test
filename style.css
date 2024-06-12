@@ -3,6 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --white: white;
+  --red: red;
+  --grey: rgb(93, 93, 93);
+  --light-blue: #4992ff;
+  --dark-blue: #0066ff;
+  --doctor-bg: #d8e3ed;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -77,4 +85,155 @@ body {
 #loaderDIV {
   display: none;
   text-align: center;
+}
+
+/* Header and Navigation bar CSS */
+.main-header {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+}
+.main-header-logo {
+  max-width: 250px;
+  width: 100%;
+}
+
+.header-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-details img {
+  display: flex;
+  width: 30px;
+  height: 30px;
+}
+.header-detail-text p {
+  font-weight: 500;
+}
+
+.header-flag-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media screen and (max-width:1060px) {
+  .header-details {
+    display: none;
+  }
+
+  .doctor-image {
+    display: none;
+  }
+}
+
+.nav-bg-color {
+  background-color: var(--light-blue);
+}
+nav {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 0 0 0 20px;
+}
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.nav-search-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  filter: invert();
+  width: 20px;
+  height: 20px;
+  top: 17px;
+  left: 10px;
+}
+
+.nav-search {
+  padding: 20px 10px 20px 50px;
+  color: var(--white);
+  outline: none;
+  border: none;
+  background-color: var(--dark-blue);
+}
+
+.nav-search::placeholder {
+  color: var(--white);
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon img {
+  filter: invert();
+  width: 30px;
+  height: 35px;
+}
+
+
+/* CSS For Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: var(--light-blue);
+}
+
+.mobile-links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.mobile-links a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.mobile-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+@media screen and (max-width:1060px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1060px) {
+  .mobile-menu {
+      display: none;
+      visibility: hidden;
+  }
 }
